@@ -68,4 +68,4 @@ go
 
 -------------------------------------------------------------------------------------------------
 
-grant execute on dbo.spIetuMarcaFacturaPM to dyngrp, rol_ietu;
+grant execute on dbo.spIetuMarcaFacturaPM to dyngrp;
