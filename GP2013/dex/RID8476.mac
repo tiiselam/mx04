@@ -1,18 +1,17 @@
-# DEXVERSION=12.00.0270.0 0 0
   MenuSelect title File entry 'Open Source Dictionary...' 
-  FileOpen file ':C:GETTY/GettyIntegracionMS/MexReclasificaImpuestosDev/trunk/Dynamics.dic' type 0 
+  FileOpen file ':C:jcTii/Desarrollo/GPDex/scc/mx04_ReclaImpuestosGP13R2v12001920Es/DynGp2013R2v12001920Dev.dic' type 0 
 ActivateWindow dictionary 'default'  form 'Main Menu' window 'DexUtils Toolbar' 
   MoveTo field 'Toolbar Utilities Button' item 0 
   ClickHit field 'Toolbar Utilities Button' item 6  # 'Extract' 
 NewActiveWin dictionary 'default'  form Extractor window Extractor 
 ActivateWindow dictionary 'default'  form Extractor window Extractor 
   ClickHit field '(L) Extract Button' 
-  FileSave file ':C:GETTY/GettyIntegracionMS/MexReclasificaImpuestosDev/trunk/Extract.dic' 
+  FileSave file ':C:jcTii/Desarrollo/GPDex/scc/mx04_ReclaImpuestosGP13R2v12001920Es/Extract.dic' 
 NewActiveWin dictionary 'default'  form Extractor window Extractor 
 NewActiveWin dictionary 'default'  form Extractor window Extractor 
   MenuSelect title File entry 'Close Source Dictionary' 
   MenuSelect title File entry 'Open Editable Dictionary...' 
-  FileOpen file ':C:GETTY/GettyIntegracionMS/MexReclasificaImpuestosDev/trunk/Extract.dic' type 0 
+  FileOpen file ':C:jcTii/Desarrollo/GPDex/scc/mx04_ReclaImpuestosGP13R2v12001920Es/Extract.dic' type 0 
 ActivateWindow dictionary 'default'  form 'Main Menu' window 'DexUtils Toolbar' 
   ClickHit field 'Toolbar Utilities Button' item 5  # 'Create Product Information' 
 NewActiveWin dictionary 'default'  form 'Product Res' window 'Product Resource' 
@@ -41,7 +40,7 @@ ActivateWindow dictionary 'default'  form 'Main Menu' window 'DexUtils Toolbar'
 NewActiveWin dictionary 'default'  form 'Auto Chunk' window 'Auto Chunk' 
 ActivateWindow dictionary 'default'  form 'Auto Chunk' window 'Auto Chunk' 
   ClickHit field 'Lookup Button 3' 
-  FileSave file ':C:GETTY/GettyIntegracionMS/MexReclasificaImpuestosDev/trunk/DXM8476.CNK' 
+  FileSave file ':C:jcTii/Desarrollo/GPDex/scc/mx04_ReclaImpuestosGP13R2v12001920Es/RID8476.CNK' 
   MoveTo field 'Dictionary Name' 
   TypeTo field 'Dictionary Name' , 'RID8476.DIC'
   MoveTo field 'Accounting Modules' item 0 
@@ -49,4 +48,6 @@ ActivateWindow dictionary 'default'  form 'Auto Chunk' window 'Auto Chunk'
   MoveTo field '(L) Major Version' 
   TypeTo field '(L) Major Version' , '12'
   MoveTo field '(L) Minor Version' 
+  TypeTo field '(L) Minor Version' , '0'
   MoveTo field '(L) Build Number' 
+  TypeTo field '(L) Build Number' , '1'
