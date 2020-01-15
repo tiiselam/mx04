@@ -1,0 +1,228 @@
+Table	"ACA_RID_TaxDetail_SETP"	"System"	22000
+Table	"ACA_RID_Trx_Status"	"System"	22001
+Table	"ACA_RID_Distributions"	"Financial"	22002
+Table	"ACA_RID_TEMP"	"System"	22003
+Table	"ACA_RID_TEMP2"	"Purchasing"	22004
+Key	"ACA_RID_TaxDetail_SETP_Key1"	"System"	22000
+Key	"ACA_RID_Trx_Status_Key1"	"System"	22001
+Key	"ACA_RID_Trx_Status_Key2"	"System"	22002
+Key	"ACA_RID_Distributions_Key1"	"Financial"	22003
+Key	"ACA_RID_TEMP_Key1"	"System"	22004
+Key	"ACA_RID_TEMP2_Key1"	"Purchasing"	22005
+Form	"ACA_RID_InstalarObjetos"	22000
+
+{
+	Window	"ACA_RID_InstalarObjetos"	22000
+	Field	"Close Button"	22000
+	Field	"CrearTablasCodigos"	22001
+	Field	"CrearVista"	22002
+	Field	"Generar Tablas"	22003
+	Field	"MigrarTablas"	22004
+	Datatype	"Close Button"	22000
+	Datatype	"CrearTablasCodigos"	22001
+	Datatype	"CrearVista"	22002
+	Datatype	"Generar Tablas"	22003
+	Datatype	"MigrarTablas"	22004
+	EventScript	"ACA_InstalarObjetos l_MigrarTablas_CHG"	22000
+	EventScript	"SOL_Instalador l_Close Button_CHG"	22001
+	EventScript	"SOL_Instalador l_Generar Tablas_CHG"	22002
+	EventScript	"SOL_Instalador_WIN_PRE"	22003
+}
+Form	"ACA_RID_TaxDetail_Master"	22001
+
+{
+	Window	"ACA_RID_TaxDetail_Master"	22000
+	Window	"Scroll"	22001
+	EventScript	"ACA_RID_TaxDetail_Master_WIN_PRE"	22000
+	EventScript	"Scroll SCROLL_FILL"	22001
+	EventScript	"Scroll CB_RID_Reimputa_CHG"	22002
+	EventScript	"ACA_RID_TaxDetail_Master_FORM_PRE"	22003
+	EventScript	"Scroll SCROLL_CHG"	22004
+	EventScript	"ACA_RID_TaxDetail_Master OK Button_CHG"	22005
+	EventScript	"ACA_RID_TaxDetail_Master Lookup Button 1_CHG"	22006
+	EventScript	"Scroll Account Number_CHG"	22007
+}
+Form	"RID_Command"	22002
+
+{
+	Window	"Dummy"	22000
+	Command	"ACA_RID_TaxDetail_Master"	22000
+}
+Form	"ACA_RID_PM"	22003
+
+{
+	Window	"ACA_RID_PM"	22000
+	Window	"Scroll"	22001
+	Field	"FillTempTable"	22000
+	Field	"FechaDesde"	22001
+	Field	"FechaHasta"	22002
+	Field	"Reclasificar"	22003
+	Field	"Revertir"	22004
+	Field	"EstadoImpuesto"	22005
+	Field	"FillTemp2Table"	22006
+	Datatype	"FillTempTable"	22000
+	Datatype	"FechaDesde"	22001
+	Datatype	"FechaHasta"	22002
+	Datatype	"Reclasificar"	22003
+	Datatype	"Revertir"	22004
+	Datatype	"EstadoImpuesto"	22005
+	Datatype	"FillTemp2Table"	22006
+	Function	"GetBatchNUmber"	22000
+	Function	"CheckLastReclasificationDate"	22001
+	EventScript	"ACA_RID_PM l_FillTempTable_CHG"	22000
+	EventScript	"ACA_RID_PM Redisplay Button_CHG"	22001
+	EventScript	"Scroll SCROLL_CHG"	22002
+	EventScript	"Scroll Selected To Print_CHG"	22003
+	EventScript	"ACA_RID_PM l_Reclasificar_CHG"	22004
+	EventScript	"ACA_RID_PM l_Reclasificar_CHG_DUP"	22005
+	EventScript	"ACA_RID_PM l_Revertir_CHG"	22006
+	EventScript	"ACA_RID_PM_WIN_PRE"	22007
+	EventScript	"ACA_RID_PM l_EstadoImpuesto_CHG"	22008
+	EventScript	"ACA_RID_PM TRX Date_CHG"	22009
+	EventScript	"ACA_RID_PM l_FillTemp2Table_CHG"	22010
+}
+Form	"ACA_RID_RM"	22004
+
+{
+	Window	"ACA_RID_RM"	22000
+	Window	"Scroll"	22001
+	Field	"FechaDesde"	22000
+	Field	"FechaHasta"	22001
+	Field	"FillTempTable"	22002
+	Field	"Reclasificar"	22003
+	Field	"Revertir"	22004
+	Field	"EstadoImpuesto"	22005
+	Field	"FillTemp2Table"	22006
+	Datatype	"FechaDesde"	22000
+	Datatype	"FechaHasta"	22001
+	Datatype	"FillTempTable"	22002
+	Datatype	"Reclasificar"	22003
+	Datatype	"Revertir"	22004
+	Datatype	"EstadoImpuesto"	22005
+	Datatype	"FillTemp2Table"	22006
+	Function	"GetBatchNUmber"	22000
+	Function	"CheckReverseSelected"	22001
+	Function	"CheckLastReclasificationDate"	22002
+	EventScript	"ACA_RID_RM Redisplay Button_CHG"	22000
+	EventScript	"ACA_RID_RM l_FillTempTable_CHG"	22001
+	EventScript	"ACA_RID_RM l_Reclasificar_CHG"	22002
+	EventScript	"ACA_RID_RM l_Reclasificar_CHG_DUP"	22003
+	EventScript	"ACA_RID_RM l_Revertir_CHG"	22004
+	EventScript	"Scroll SCROLL_CHG"	22005
+	EventScript	"Scroll Selected To Print_CHG"	22006
+	EventScript	"ACA_RID_RM_WIN_PRE"	22007
+	EventScript	"ACA_RID_RM l_EstadoImpuesto_CHG"	22008
+	EventScript	"ACA_RID_RM l_FillTemp2Table_CHG"	22009
+}
+Datatype	"CB_RID_Reimputa"	"System"	22000
+Datatype	"ACA_RID_Origen_DDL"	"System"	22001
+Datatype	"ACA_RID_Tax_Status_DDL"	"System"	22002
+Datatype	"ACA_RID_Last_INT"	"System"	22003
+String	"Reimputa en el pago"	"System"	22000
+String	"ACA_RID_TaxDetail_SETP"	"System"	22001
+String	"Crear Tablas Codigos"	"System"	22002
+String	"Crear Vista"	"System"	22003
+String	"Instalar"	"System"	22004
+String	"Migrar Tablas"	"System"	22005
+String	"Instalador Tablas FEI"	"System"	22006
+String	"Factura Electrónica Importadores RG 2975 online"	"System"	22007
+String	"para Microsoft Dynamics GP 10.0"	"System"	22008
+String	"Instalador Tablas RID"	"System"	22009
+String	"Reimputacion Impuestos Devengados"	"System"	22010
+String	"Configuración detalles de impuestos reimutables"	"System"	22011
+String	"Configuración detalles de impuestos reimputables"	"System"	22012
+String	"Id. detalle"	"System"	22013
+String	"Reimp."	"System"	22014
+String	"Numero de cuenta"	"System"	22015
+String	"Descripción de cuenta0"	"System"	22016
+String	"Configuración impuestos a reimputar"	"System"	22017
+String	"MCP Transaction"	"System"	22018
+String	"Transaccion MCP"	"System"	22019
+String	"Reclasificacion"	"System"	22020
+String	"Reclasificado"	"System"	22021
+String	"Revertido"	"System"	22022
+String	"ACA_RID_Trx_Status"	"System"	22023
+String	"ACA_RID_Distributions"	"System"	22024
+String	"ACA_RID_TEMP"	"System"	22025
+String	"Reclasificador de impuestos para pagos"	"System"	22026
+String	"P."	"System"	22027
+String	"Nro. pago"	"System"	22028
+String	"Id. proveedor"	"System"	22029
+String	"Importe"	"System"	22030
+String	"Proc."	"System"	22031
+String	"Estado del pago"	"System"	22032
+String	"Observaciones"	"System"	22033
+String	"Fecha contable:"	"System"	22034
+String	"Desde fecha:"	"System"	22035
+String	"Hasta fecha:"	"System"	22036
+String	"Id. proveedor:"	"System"	22037
+String	"Nro. pago:"	"System"	22038
+String	"No procesado"	"System"	22039
+String	"Estado del impuesto"	"System"	22040
+String	"Reclasificar"	"System"	22041
+String	"Revertir"	"System"	22042
+String	"Id. lote:"	"System"	22043
+String	"Reclasificador de impuestos para cobros"	"System"	22044
+String	"Estado del impuesto:"	"System"	22045
+String	"Id. cliente:"	"System"	22046
+String	"Id. cliente"	"System"	22047
+String	"Nombre cliente"	"System"	22048
+String	"Id. Chequera"	"System"	22049
+String	"Nro. cobro:"	"System"	22050
+String	"ACA_RID_TEMP2"	"System"	22051
+String	"Financial"	"Project"	22052
+String	"Sales"	"Project"	22053
+String	"Purchasing"	"Project"	22054
+String	"Inventory"	"Project"	22055
+String	"Payroll"	"Project"	22056
+String	"Project"	"Project"	22057
+String	"System"	"Project"	22058
+String	"Company"	"Project"	22059
+String	"OnlineDoc0"	"Project"	22060
+String	"3rdParty0"	"Project"	22061
+String	"Macro0"	"Project"	22062
+String	"Palette"	"Project"	22063
+String	"Dexterity0"	"Project"	22064
+String	"DexterSys0"	"Project"	22065
+String	"RW0"	"Project"	22066
+String	"PRTax0"	"Project"	22067
+String	"Pathname"	"Project"	22068
+String	"DesignDoc0"	"Project"	22069
+String	"OnlineDoc1"	"Project"	22070
+String	"3rdParty1"	"Project"	22071
+String	"Macro1"	"Project"	22072
+String	"Dexterity1"	"Project"	22073
+String	"DexterSys1"	"Project"	22074
+String	"RW1"	"Project"	22075
+String	"PRTax1"	"Project"	22076
+String	"DesignDoc1"	"Project"	22077
+Field	"CB_RID_Reimputa"	"System"	22000
+Field	"LI_Cuenta_ImpPagado"	"System"	22001
+Field	"ACA_TriggersRegistered"	"System"	22002
+Field	"ACA_RID_Origen"	"System"	22003
+Field	"ACA_RID_Tax_Status"	"System"	22004
+Field	"ACA_RID_Last"	"System"	22005
+Field	"VoidDocument"	"System"	22006
+Procedure	"Startup"	"System"	22000
+Procedure	"ACA_RID_Reimputar"	"System"	22001
+Procedure	"Trigger_DefaultButtonDistribution"	"System"	22002
+Procedure	"ACA_RID_CloseCommandForm"	"System"	22003
+Procedure	"ACA_RID_CreateMenuItems"	"System"	22004
+Procedure	"ACA_RID_OpenCommandForm"	"System"	22005
+Procedure	"ACA_RID_Reimputar_RM"	"System"	22006
+Procedure	"Trigger_DefaultButtonDistribution_RM"	"System"	22007
+Procedure	"RegisterTriggers"	"System"	22008
+Procedure	"ACA_Startup"	"System"	22009
+Procedure	"ACA_RID_FillTempTable_PM"	"System"	22010
+Procedure	"ACA_RID_PM_Process"	"System"	22011
+Procedure	"ACA_RID_PM_Revertir"	"System"	22012
+Procedure	"ACA_RID_RM_Process"	"System"	22013
+Procedure	"ACA_RID_FillTempTable_RM"	"System"	22014
+Procedure	"Voided_Payments"	"System"	22015
+Procedure	"Set_Document_Number"	"System"	22016
+Procedure	"Open_To_Void"	"System"	22017
+Procedure	"ACA_RID_RM_Revertir"	"System"	22018
+Constant	"MCP_PRODID"	"System"	22000
+Constant	"MCP_PRODNAME"	"System"	22001
+Function	"CheckTableInstall"	"System"	22000
+Function	"ConvertDateForSQL"	"System"	22001
